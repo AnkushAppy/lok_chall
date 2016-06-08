@@ -11,10 +11,9 @@ class cr:
     def productNameCleaner(self,name):
         pass
 
-
+        
     def pageKeywordSearch(self,keyword,pageNo):
         url = "http://www.shopping.com/products~PG-" + pageNo + "?KW=" + keyword
-        #print url
         response = requests.get(url)
         data = response.content
         productString = ""
@@ -33,7 +32,6 @@ class cr:
 
     def keywordSearch(self,keyword):
         url = "http://www.shopping.com/products?KW=" + keyword
-        #print url
         response = requests.get(url)
         data = response.content
         try:
@@ -43,7 +41,7 @@ class cr:
             return m.group(2)
         except Exception as e:
             print e
-
+#unit test will run two test cases one for each function in cr class 'crawler class'
 class MyTest(unittest.TestCase):
     
     def testOne(self):
@@ -53,6 +51,7 @@ class MyTest(unittest.TestCase):
     def testTwo(self):
         obj = cr()
         fp = open('test','r')
+        # using common unit testing method. Trying to write mock code
         self.assertEqual(obj.pageKeywordSearch("drill","2"),fp.read())
 
 unittest.main()
