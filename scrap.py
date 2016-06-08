@@ -3,6 +3,7 @@ import requests
 from BeautifulSoup import BeautifulSoup
 import re
 
+#crawler class
 class cr:
         def __init__(self):
                 pass
@@ -41,26 +42,12 @@ class cr:
                         return e
 
 
-keyword = raw_input("Enter keyword")
-page = raw_input("Enter page number")
+
+#raw_input will take input in string format. So no need to convert.
+keyword = raw_input("Enter keyword: ")
+page = raw_input("Enter page number: ")
+#cr object
 obj = cr()
 print obj.pageKeywordSearch(keyword, page)
 print obj.keywordSearch(keyword)
-
-
-'''
-if __name__=="__main__":
-
-	if len(sys.argv) == 1:
-		print "Enter keyword and page No."
-	elif len(sys.argv) == 2:
-		obj = cr()
-		obj.keywordSearch(sys.argv[1])
-	elif len(sys.argv) == 3:
-		obj = cr()
-		obj.pageKeywordSearch(sys.argv[1], sys.argv[2])
-	else:
-		"Enter (keyword and page No.) or keyword"
-
-'''
 
