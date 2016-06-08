@@ -19,15 +19,6 @@ def rev_hash(s):
         except Exception as e:
                 return "Enter valid number"
 
-#s = raw_input("enter the word")
-#lawnmower, acdegilmnoprstuw, 680131659347, 930846109532517
-##s = "lawnmower"
-##print hash(s)
-##s="leepadg"
-##print hash(s)
-##s = "acdegilmnoprstuw"
-##print hash(s)
-
 class MyTest(unittest.TestCase):
 
 	def testOne(self):
